@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head  xmlns:th="http://thymeleaf.org">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            padding-left: 10%;
+            width: 80%;
+            justify-content: center;
+        }
+
+        .left-side {
+            flex: 1;
+            position: relative;
+            background: url('/img/bg.jpg') center/cover;
+            color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .left-side h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .left-side p {
+            margin: 8px 0;
+            font-size: 0.8em;
+            color: #ccc;
+        }
+
+        .right-side {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertical centering */
+    align-items: center; /* Horizontal centering */
+}
+
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background: linear-gradient(to right, rgb(128, 0, 255), rgb(128, 128, 255));
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100%;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, rgb(128, 0, 255), rgb(128, 128, 255));
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left-side">
+            <h2>Contact Us</h2>
+            <p>Address:<br>Xiamen University Malaysia</p>
+            <p>Email:<br>XMUM@123.COM</p>
+            <p>Phone:<br>+60 014123123</p>
+        </div>
+
+        <div class="right-side">
+            <form >
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+                <a th:href="@{/home}">HOME</a>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

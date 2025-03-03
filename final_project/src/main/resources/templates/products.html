@@ -1,0 +1,181 @@
+<!DOCTYPE html >
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Products</title>
+    <link rel="stylesheet" href="/css/homepage.css">
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .fl_left {
+            float: left;
+            width: 24%;
+            padding-left: 10px;
+        }
+
+        .fl_left img {
+            width: 300px;
+            height: 300px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .fl_left img:hover {
+            transform: scale(1.4);
+        }
+
+        .p_title_ {
+            color: #666;
+            word-break: normal;
+            font-size: 14;
+            line-height: 1.95;
+			text-align: justify;
+        }
+
+        .p_item {
+            color: #666;
+            
+            font-size: 14px;
+            line-height: 1.95;
+            text-align:justify;
+        }
+
+        .more {
+            width: 200px;
+            border: 2px solid red;
+            border-radius: 25px;
+            margin: 0 auto;
+        }
+
+        .more_in {
+            background-color: red;
+        }
+
+        .more a {
+            margin: 5px 5px 5px 15px;
+            color: red;
+            text-align: center;
+    		display: block; 
+    		text-decoration: none;
+        }
+
+        .more_in a {
+            color: white;
+        }
+
+		.fl_left h3,
+		.fl_left .p_item {
+		    border: 2px solid white;
+		    padding: 10px; /* 添加内边距，使边框不紧贴文本 */
+		    margin: 10px 0; /* 添加外边距，增加文本与边框之间的空隙 */
+		}
+
+
+    </style>
+</head>
+<body>
+    <Header>
+  
+    <!-- Header 1-->
+    <div class="headbar">
+        <div class="logo-name">
+          <div class="logo">
+            <img src="/img/logohuahua.png" alt="B2B Logo">
+          </div>
+          <div class="name">Hua Hua Tech</div>
+        </div>
+        <div class="search-bar">
+          <div class="search-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+          </div>
+          <input id="search-input" type="text" class="input-text" placeholder="Search by product name or URL">
+        </div>
+        <a class="admin-button" th:href="@{/admin}">Admin page</a>
+      </div>
+      
+      <script>
+        const searchInput = document.getElementById('search-input');
+      
+        searchInput.addEventListener('input', (event) => {
+          const searchTerm = event.target.value;
+         
+          console.log('Search term:', searchTerm);
+          });
+      </script>
+      
+
+      <!-- Header menu-->
+
+      <div class="headmenu">
+        <div class="categories">
+          <div><a th:href="@{/home}">HOME</a></div>
+          
+          <div><a th:href="@{/products}">PRODUCTS</a></div>
+          <div><a th:href="@{/contact}">CONTACT</a></div>
+          <div><a th:href="@{/feedback}">FEEDBACK</a></div>
+        </div>
+        <div class="actions">
+          <div class="favorites">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#1071FF" class="bi bi-star" viewBox="0 0 16 16">
+              <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+            </svg>
+            <div style="color: #1071FF; font-weight: bold;">FAVORITES</div>
+          </div>
+          <div class="cart">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#1071FF" class="bi bi-cart4" viewBox="0 0 16 16">
+              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+            </svg>
+            <div  style="color: #1071FF; font-weight: bold;"> CART</div>
+          </div>
+        </div>
+      </div>
+    </Header>
+    
+    <div class="main">
+        <div class="fl_left">
+            <img src="img/fhq.png"/>
+            <h3>FireWall</h3>
+            <p class="p_item">The HiSecEngine USG12000 series firewall (hereinafter referred to as the USG12000 series) is Huawei's first T-class AI firewall, which provides real-time protection against known and unknown threats at the network border, and is typically deployed in cloud computing data centers, large enterprises, and campus network outlets to provide leading security protection capabilities for data centers, enterprises, and campus networks. </p> 
+            <div class="more"><a th:href="@{/admin/firewall}" class="xxx">Learn More</a></div>
+        </div>
+        <div class="fl_left">
+            <img src="img/2.png"/>
+            <h3>Qiankun Security Cloud Service</h3>
+            <p class="p_item">Huawei's Qiankun security cloud service solution uses a new cloud-side all-in-one architecture that integrates a variety of security capabilities, on-demand subscription, and rapid opening; cloud experts + intelligent analysis to solve security "troubleshooting", one detection, and sharing across the board; intelligent analysis, big data technology, and other technologies to improve the efficiency of automated operation and maintenance, and rapid closed-loop disposal; and provides users with protection and response to the integration of cloud-based security services.</p>
+            <div class="more"><a th:href="@{/admin/security_cloud_service}" class="xxx">Learn More</a></div>
+        </div>
+        <div class="fl_left">
+            <img src="img/3.png"/>
+            <h3>Intrusion Prevention System</h3>
+            <p class="p_item">A new generation of high-performance professional intrusion prevention products for next-generation data centers, HiSecEngine IPS6000F series products expand on the basis of traditional IPS products, using a new hardware and software architecture for multiple comprehensive detection of system, application, malware and client attacks, fast, accurate and effective defense against threats, while providing a more optimized management experience. Comprehensively protects customers' application and business security. Widely used in finance, government, operators, large enterprises and other industries.</p>
+            <div class="more"><a th:href="@{/admin/instrution_prevention}" class="xxx">Learn More</a></div>
+        </div>
+        <div class="fl_left">
+            <img src="img/4.png"/>
+            <h3>DDoS Attack Defense</h3>
+            <p class="p_item">Huawei HiSecEngine AntiDDoS12000 provides up to 2T+ security protection performance and expansion capabilities to effectively respond to high-traffic DDoS attacks; for hundreds of complex attacks, it provides second- or even millisecond-level defense, effectively blocking the attacks and protecting customers' businesses forever.</p>  
+            <div class="more"><a th:href="@{/admin/DDOS}" class="xxx">Learn More</a></div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+	
+	var elements = document.getElementsByClassName("xxx"); // 获取要操作的元素
+	
+	for (var i = 0; i < elements.length; i++) {
+	    elements[i].addEventListener("mouseenter", function(event) {
+	      this.parentElement.classList.add('more_in');
+	    });
+		
+		elements[i].addEventListener("mouseout", function(event) {
+		   this.parentElement.classList.remove('more_in');
+		});
+	}
+</script>
+
+

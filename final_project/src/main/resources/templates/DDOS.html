@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<title>DDOS</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+		rel="stylesheet" 
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/homepage.css">
+		<style>
+			.pricetitle{
+				display: block;
+				justify-content: space-around;
+				margin-top: 50px;
+				text-align: center;
+			}
+			.center {
+				text-align: center;
+				margin-top: 50px;
+			}
+
+			.price-container {
+				display: flex;
+				justify-content: space-around;
+				margin-top: 20px;
+			}
+
+			.price-box {
+				width: 45%;
+				padding: 20px;
+				box-shadow: 0px 7px 14px 2px rgba(0, 15, 79, 0.05);
+				border-radius: 10px;
+				background-color: #fff;
+				text-align: center;
+				
+			}
+
+			.price-box h3 {
+				color: #333;
+			}
+
+			.price-box p {
+				font-size: 20px;
+				color: #666;
+			}
+
+			.price-box ul {
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+			}
+
+			.price-box ul li {
+				text-align: left;
+				padding: 5px 0;
+			}
+
+			html {
+			      scroll-behavior: smooth;
+			    }
+			 body {
+			            margin: 0;
+			            padding: 0;
+			        }
+			.bg{
+				background-image: url("../img/b1.jpeg");
+				width: 100%;
+				height: 600px;
+				background-size: cover; /* 使背景图片完全覆盖div */
+				background-position: center; /* 居中显示背景图片 */
+				background-repeat: no-repeat; /* 防止背景图片重复 */
+			}
+			.text{
+				    padding-top: 65px;
+				    padding-left: 70px;
+			}
+			.text h1{
+				color: #333333;
+				font-size: 42px;
+			}
+			.text p{
+				color: #666606;
+				font-size: 20px;
+			}
+			ul li{
+				display: inline;
+			}
+			.gx{
+				padding: -10px;
+				width: 90%;
+				margin-top: 0;
+				box-shadow: 0px 7px 14px 2px rgba(0, 15, 79, 0.05);
+				display: flex;
+				flex-wrap: nowrap;
+				justify-content: space-between;
+				align-items: center;
+				background-color: #fff;
+				border-radius: 10px;
+				margin-left: 5%;
+				margin-top: -30px;
+				height: 80px;
+			}
+			.gx div ul li{
+				margin-left: 15px;
+			}
+			.f_l{
+				float: left;
+			}
+			.f_r{
+				float: right;
+			}
+			
+			.w_50{
+				width: 48%;
+			}
+			.w_33{
+				width: 30%;
+			}
+			p{
+				font-size: 16px;
+				color: #666666;
+				line-height: 1.95;
+				word-break: break-word; /*或者word-break: break-word;*/
+			}
+			.content{
+				margin-top: 55px;
+			}
+			.p_h{
+				color: #333;
+				font-size:22px;
+			}
+			.p_i{
+				color: #666666;
+				font-size:14px;
+			}
+			.float_box{
+				width: 100%;
+				display: flex;
+				display: inline-block;
+				box-sizing: border-box;
+				text-align: center;
+				margin-top: 50px;
+			}
+			.bg_color{
+				background-color: #f1f3f5;
+				margin-right: 35px;
+				border-radius: 10px;
+				padding-top: 30px;
+			}
+			.center{
+				text-align: center;
+			}
+			.js div p{
+				font-size: 40px;
+				color: #333333;
+			}
+			.js div h5{
+				font-size: 18px;
+				color: #c7000b;
+			}
+			.table_div{
+				width: 100%;
+					margin: 0 auto;
+			}
+			table {
+			   text-align: center;
+			   margin:0 auto; /* 居中 */
+			   border-spacing: 50px;
+			   border-collapse: collapse; /* 合并单元格的边框 */
+			   width: 80%;
+			   line-height: 1.95;
+			}
+
+
+			.enlarge-img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.enlarge-img:hover {
+    transform: scale(1.2);
+}
+
+
+	
+			
+			td, th {
+			    border-bottom: 0.5px solid black; /* 设置单元格的边框样式 */
+			    padding: 10px; /* 设置单元格内容和边框的内边距，根据需要调整 */
+			}
+			
+			tr {
+			    border-bottom: 0.5px solid solid #666666; /* 设置每行的底部边框，可以根据需要调整宽度和颜色 */
+			    margin-bottom: 10px; /* 设置行间距，根据需要调整 */
+			}
+			
+			
+			table thead{
+				font-size: 18px;
+				color: #333;
+				
+			}
+			table tbody{
+				font-size: 14px;
+				color: #666666;
+			}
+			.font_red{
+				color: red;
+			}
+			a{
+				text-decoration: none;
+				color: black;
+			}
+			.xxzx{
+				margin-right: 30px;
+				border-radius:25px;	
+				width: 130px;
+				height: 50px;
+				background-color: #c7000b;
+				text-align: center;
+				padding-bottom: 4px;;
+			}
+			.xxzx{
+				padding-top: 13px;
+				color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+			
+				<div class="bg">
+					<div class="text">
+						<h1>Huawei HiSecEngine AntiDDoS12000<br>
+							Series DDoS Defense System</h1>
+						<P>Excellent performance, millisecond response, precise defense, intelligent driving</P>
+					</div>
+				</div>
+				<div  class="gx">
+					<div>
+						<ul>
+							
+							<li><a class="xxx" th:href="@{/home}">HOME</a></li>
+						</ul>
+					</div>
+					<div>
+						<div  th:object="${product}">
+						<a th:if="${product.quantity > 0}"
+						th:href = "@{/admin/instrution_prevention/payment/{name}(name=${product.productName})}"
+						class="btn xxzx">Consult</a>
+						</div>
+					</div>
+				</div>
+			
+
+				<div id="gs" style="width: 100%;">
+					<div class="f_l w_50" >
+						<img class="enlarge-img" src="../img/ddos_1.png" />
+
+					</div>
+					<div class="f_l w_50 content" >
+						<h2>Huawei HiSecEngine AntiDDoS12000 Series DDoS Defense System</h2>
+						<p>
+							Huawei HiSecEngine AntiDDoS12000 series provides up to 2.4Tbps security protection performance and expansion capabilities to effectively respond to high-traffic DDoS attacks; for hundreds of complex attacks, it provides second or even millisecond-level defense to effectively block attacks and protect customers' businesses forever. It is suitable for customers in various industries such as finance, government, education, large enterprises and IDC.
+						</p>
+						<div id="pricing" class="center">
+							<div class="price-container">
+								<div class="price-box"  th:object="${product}">
+									<h2 class="pricetitle" style="margin-top: 10px;">Price</h2>
+									<p th:text="'$' + ${product.price}"></p>
+									<h2 class="pricetitle">Quantity</h2>
+									<p th:text="${product.quantity}"></p>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div>
+				<div id="tx" class="float_box">
+					<div class="f_r w_33 bg_color">
+						<img src="../img/b4-4.png"/>
+						<p class="p_h">Intelligent driving</p>
+						<p class="p_i">Expert policy templates, automatic tuning of defense policies,and intelligent driving <br>
+							 throughout the defense process
+						</p>
+					</div>
+					<div class="f_r w_33 bg_color">
+						<img src="../img/b4-3.png"/>
+						<p class="p_h">Precision Defense</p>
+						<p class="p_i">Full-flow packet-by-packet detection, online upgrade of the defense engine,effective<br>
+							 filtering of 100+ complicated<br>
+						</p>
+					</div>
+					
+					<div class="f_r w_33 bg_color" >
+						<img src="../img/b4-2.png"/>
+						<p class="p_h">Millisecond response</p>
+						<p class="p_i">Millisecond attack response with zero business impact</p>
+					</div>
+					<div class="f_r w_33 bg_color" >
+						<img src="../img/b4-1.png"/>
+						<p class="p_h">Superior performance</p>
+						<p class="p_i">NP cooperative CPU defense acceleration, the whole machine up to 2.4Tbps defense capacity<br>
+					
+						</p>
+					</div>
+				</div>
+				<div id="jsgg" class="center js">
+					<div><p>Technical specification</p></div>
+					<div><h5>AntiDDoS12000 Series</h5></div>
+				</div>
+				<div class="table_div">
+					<table boder="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+					    <thead>
+					        <tr>
+					            <td style="width: 15%;">Model number</td>
+					            <td>AntiDDoS12004</td>
+					            <td>AntiDDoS12008</td>
+					            <td>AntiDDoS12016</td>
+					        </tr>
+					    </thead>
+					    <tbody class="add-bg-default">
+					        <tr>
+					            <td>Maximum defense bandwidth</td>
+					            <td>400 Gbps</td>
+					            <td>1.2 Tbps</td>
+					            <td>2.4 Tbps</td>
+					        </tr>
+					        <tr>
+					            <td>Maximum defense packet rate</td>
+					            <td>300 Mpps</td>
+					            <td>900 Mpps</td>
+					            <td>1800 Mpps</td>
+					        </tr>
+					        <tr>
+					            <td>Expansion slot</td>
+					            <td>4</td>
+					            <td>8</td>
+					            <td>16</td>
+					        </tr>
+					        <tr>
+					            <td>Expansion daughter card</td>
+					            <td>• 24ports 10GBase-SFP+ + 2ports 40G/100GBase-QSFP28<br>
+					                • 48ports 10GBase-SFP+</td>
+					            <td>• 24ports 10GBase-SFP+ + 2ports 40G/100GBase-QSFP28<br>
+					                • 48ports 10GBase-SFP+<br>
+					                • 4ports 400GBase-QSFP<br>
+					                • 12ports 40G/100GBase-QSFP28<br></td>
+					            <td>• 24ports 10GBase-SFP+ + 2ports 40G/100GBase-QSFP28<br>
+					                • 48ports 10GBase-SFP+<br>
+					                • 4ports 400GBase-QSFP<br>
+					                • 12ports 40G/100GBase-QSFP28<br></td>
+					        </tr>
+					        <tr>
+					            <td>Width x Depth x Height(mm)</td>
+					            <td>442mm×874mm×438mm （9.8U）</td>
+					            <td>442mm×874mm×703mm (15.8U)</td>
+					            <td>442mm×1033mm×1436mm (32.3U)</td>
+					        </tr>
+					        <tr>
+					            <td>DDoS Protection</td>
+					            <td colspan="3">
+					
+					                • Malformed message defense: <br>
+					
+					                <p>Support LAND, Fraggle, Smurf, Winnuke, Ping of Death, Tear Drop, TCP Error Flag and other attack defense. </p><br>
+					
+					                • Scanning for snooping-type attack defenses: <br>
+					
+					                <p>Support ports scanning, address scanning, TRACERT control message attack, IP source routing option attack, IP timestamp option attack, IP route record option attack and other attack defense. </p><br>
+					
+					                • Network flood attack defense: <br>
+					
+					                <p>Supports SYN Flood, SYN-ACK Flood, ACK Flood, FIN Flood, RST Flood, TCP Fragment Flood, TCP Malformed Flood, UDP
+					                    Flood, UDP Malformed, UDP Fragment Flood, IP Flood, ICMP Fragment Flood, ICMP
+					                    IP Flood, ICMP Fragment Flood, ICMP Fragment Flood, Other Flood and other common network layer flood attack defense; support sweep attack, pulse attack defense. </p><br>
+					
+					                • Session layer attack defense: <br>
+					
+					                <p>Support real source SYN Flood, real source ACK Flood, TCP connection exhaustion, Sockstress, TCP null connection and other common session layer attack defense. </p><br>
+					
+					                • UDP reflection attack defense: <br>
+					
+					                <p>Support NTP, DNS, SSDP, CLDAP, Memcached, Chargen, SNMP, WSD and other common UDP reflection amplification attack static filtering rules; <br>
+					                    Supports dynamic generation of filtering rules to defend against new UDP reflection amplification attacks. </p><br>
+					
+					                • TCP reflection attack defense: <br>
+					
+					                <p>Supports the creation of static filtering rules based on network layer features; <br>
+					                    Supports dynamic generation of TCP reflection attack filtering rules. </p><br>
+					
+					                • TCP replay attack defense: <br>
+					
+					                <p>Supports the creation of static filtering rules based on network layer characteristics;<br>
+					                    Support dynamic generation of TCP playback attack filtering rules. </p><br>
+					
+					                •HTTP Application Layer Attack Defense: <br>
+					
+					                <p>Supports defense against high-frequency HTTP application attacks based on behavioral analysis/HTTP CC； <br>
+					                    Supports machine learning-based defense against low-frequency HTTP application attacks/HTTP CC； <br>
+					                    Supports defense against slow HTTP attacks based on behavioral analysis, includingHTTP Slow Header、HTTP Slow Post、</br>
+										RUDY、LOIC、HTTP Multi-Methods、HTTP Range amplification, HTTP null connections, etc.</p><br>
+					
+					                • HTTPS application/TLS encryption application attack defense: <br>
+					
+					                <p>Supports high-frequency HTTPS/TLS encryption attack defense;<br>
+					                    Support slow TLS incomplete session and empty connection defense. </p><br>
+					
+					                • DNS Application Attack Defense: <br>
+					
+					                <p>Support DNS Malformed、DNS Query Flood、NXDomain Flood、DNS Reply Flood、DNS cache poisoning defense； <br>
+					                     </p><br>
+					
+					                • SIP application attack defense: <br>
+					
+					                <p>SIP Flood/SIP Methods Flood defense is supported, including:Register Flood、Deregistration Flood、Authentication Flood，Call
+					                    Flood and other attack defense; <br>
+					                    Support for source speed limiting. </p><br>
+					
+					                • Customized filtering rules: <br>
+					
+					                <p>Supports customization of local software and hardware filtering rules and BGP filtering rules.
+					                    flowspec filtering rules to perform remote filtering, definable fields include: source/destination IP, message length, IP protocol, IP load, source/destination ports, TCP-Flag, TCP load, UDP load, ICMP load, DNS domain name, HTTP
+					                    URI, HTTP User-Agent field, SIP caller field, SIP callee field, and so on. </p><br>
+					
+					                • Geolocation Filtering:<br>
+					
+					                <p>The blocking policy supports customization, overseas to country and domestic to province.</p><br>
+					
+					                • Co-stack defense： <br>
+					
+					                <p>Supports IPv4/IPv6 co-stack DDoS attack defense. </p><br>
+					
+					                • Intelligent tuning of defense strategies: <br>
+					
+					                <p>Supports snapshots of attack traffic and evaluation of defense effectiveness; <br>
+					                    Supports automatic tuning of defense policies;<br>
+					                    Support for automatic forensics of attacks. </p><br>
+					
+					                • Baseline Learning: <br>
+					
+					                <p>Supports dynamic traffic baseline learning with assignable learning cycles. </p><br>
+					
+					                • Grab bag forensics: <br>
+					
+					                <p>Support automatic packet capture and custom ACL capture based on attack events, <br>
+										support online analysis of packet capture files,traceability and download local analysis. </p><br>
+					
+					            </td>
+					        </tr>
+					    </tbody>
+					</table>
+		</div>
+	</body>
+</html xmlns:th="http://thymeleaf.org">
+<script>
+	
+	var elements = document.getElementsByClassName("xxx"); 
+	
+	for (var i = 0; i < elements.length; i++) {
+	    elements[i].addEventListener("mouseenter", function(event) {
+	      this.classList.add('font_red');
+	    });
+		
+		elements[i].addEventListener("mouseout", function(event) {
+		   this.classList.remove('font_red');
+		});
+	}
+</script>

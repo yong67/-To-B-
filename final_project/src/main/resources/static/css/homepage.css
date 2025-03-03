@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap');
+/*********************************************************\
+|************************* Topbar ************************|
+/*********************************************************/
+
+.hero-section {
+    position: relative;
+    text-align: right;
+    color: white;
+    background: url('path_to_your_image/cloudback.png') no-repeat center center;
+    background-size: cover;
+    height: 500px; 
+  }
+  
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    text-align: right;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 20px; 
+  }
+  
+  .btn {
+    padding: 10px 25px;
+    border-radius: 5px; 
+    color: white; 
+    font-weight: bold;
+    text-decoration: none; 
+    transition: all 0.3s ease;
+  }
+  
+  .btn-overview {
+    background-color: #007bff; 
+  }
+  
+  .btn-products {
+    background-color: #28a745; 
+  }
+  
+  .btn-consulting {
+    background-color: #dc3545; 
+  }
+  
+  .btn:hover {
+    filter: brightness(85%); 
+  }
+  
+  
+  .hero-image {
+    width: 100%;
+    height: 500px; 
+    object-fit: cover; 
+  }
+  
+  
+
+/*********************************************************\
+|************************* headbar   **********************|
+/*********************************************************/
+.headbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    background-color: #ffffff;
+  }
+  
+  .logo {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .logo-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .name {
+    font-size: 14px;
+    color: #737B7D;
+    font-weight: normal;
+  }
+  
+  .name.bold {
+    font-weight: bold;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px; 
+    border-radius: 8px;
+    border: 0.5px #EAECEE solid;
+    flex: 1;
+    max-width: 300px;
+    margin: 0 16px;
+  }
+  
+  .search-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .input-text {
+    flex: 1;
+    color: #737B7D;
+    font-size: 12px;
+    font-family: Basier Square;
+    font-weight: 400;
+    line-height: 18px;
+    word-wrap: break-word;
+  }
+  
+  .admin-button {
+    padding: 16px 40px;
+    background-color: #1071FF;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    font-family: Basier Square;
+    font-weight: 500;
+    line-height: 16px;
+    text-decoration: none;
+  }
+  
+  
+  
+  
+  
+
+/*********************************************************\
+|************************* header menu *******************|
+/*********************************************************/
+.headmenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: #F6F8FB;
+  }
+  
+  .categories {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .categories div {
+    color: #0C0C0C;
+    font-size: 14px;
+    font-family: Basier Square;
+    font-weight: 600;
+    line-height: 24px;
+    word-wrap: break-word;
+  }
+  
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  
+  .favorites,
+  .cart {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-family: Basier Square;
+    font-weight: 600;
+    line-height: 24px;
+    word-wrap: break-word;
+  }
+  
+ 
+  
+  .cart div:last-child {
+    font-weight: 400;
+  }
+  
+  
+  
+  .favorites:before,
+  .cart:before {
+    width: 13.33px;
+    height: 12.67px;
+  }
+  
+
+
+/*********************************************************\
+|*************************home ************************|
+/*********************************************************/
+.home {
+    background: url('/img/cloudback.png') no-repeat center center;
+    background-size: cover;
+    text-align: left;
+    padding: 100px 0; 
+    color: rgb(0, 0, 0);
+}
+
+.home-content {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 15px; 
+}
+
+.home-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.home-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.navigation-menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.navigation-menu ul li {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: #007bff; 
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navigation-menu ul li:hover,
+.navigation-menu ul li.active {
+    background: #0056b3; 
+}
+
+.button-services {
+    padding: 0.5rem 1rem;
+    background-color: #dc3545; 
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    display: inline-block; 
+    margin-top: 1rem; 
+}
+
+.button-services:hover {
+    background-color: #bd2130; 
+}
+
+
+
+/* ****************************************************************************/
+/* ***************************** why us **************************************/
+/* ****************************************************************************/
+
+
+.why-choose-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    width: 20%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.feature img {
+    width: 200px; 
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.show-more {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 10px 20px;
+    background-color: #4000ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.show-more:hover {
+    background-color: #ff0048;
+}
+
+
+
+/* ****************************************************************************/
+/* ***************************** company background **************************************/
+/* ****************************************************************************/
+
+
+
+/* ****************************************************************************/
+/* ***************************** Footer **************************************/
+/* ****************************************************************************/
+
+
+footer {
+    background: #4070f6;
+    padding: 15px 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 15px 15px 0 0; 
+  }
+  
+  footer .text span {
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+  }
+  
+  footer .text span a {
+    font-weight: 500;
+    color: #FFF;
+  }
+  
+  footer .text span a:hover {
+    text-decoration: underline;
+  }
+
+  .company-background-container {
+    background-color: #f0f8ff; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 30px; 
+  }
+  
+  
+  .company-background-container:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+ 
+  .company-background-title {
+    color: #003366; 
+    font-size: 38px;
+    margin-bottom: 15px;
+  }
+  
+  .company-background-content {
+    color: #333333; 
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .company-background-subtitle {
+    font-weight: bold;
+    color: #007bff; 
+    margin-bottom: 10px;
+  }
+  .large-text {
+    font-size: 22px; 
+}
+
+.company-details-title {
+  color: #003366;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.company-details-text {
+  color: #333333; 
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .company-details-title {
+      font-size: 20px;
+  }
+  .company-details-text {
+      font-size: 14px;
+  }
+}
+
+
+  
+
+  @media (max-width: 768px) {
+    .company-background-container {
+      padding: 10px;
+    }
+    .company-background-title {
+      font-size: 24px;
+    }
+  }

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Firewall</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+		rel="stylesheet" 
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/homepage.css">
+		<style>
+			.pricetitle{
+				display: block;
+				justify-content: space-around;
+				margin-top: 50px;
+				text-align: center;
+			}
+			.center {
+				text-align: center;
+				margin-top: 50px;
+			}
+
+			.price-container {
+				display: flex;
+				justify-content: space-around;
+				margin-top: 20px;
+			}
+
+			.price-box {
+				width: 45%;
+				padding: 20px;
+				box-shadow: 0px 7px 14px 2px rgba(0, 15, 79, 0.05);
+				border-radius: 10px;
+				background-color: #fff;
+				text-align: center;
+				
+			}
+
+			.price-box h3 {
+				color: #333;
+			}
+
+			.price-box p {
+				font-size: 20px;
+				color: #666;
+			}
+
+			.price-box ul {
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+			}
+
+			.price-box ul li {
+				text-align: left;
+				padding: 5px 0;
+			}
+
+			html {
+			      scroll-behavior: smooth;
+			    }
+			 body {
+			            margin: 0;
+			            padding: 0;
+			        }
+			.bg{
+				background-image: url("../img/b1.jpeg");
+				width: 100%;
+				height: 600px;
+				background-size: cover; /* 使背景图片完全覆盖div */
+				background-position: center; /* 居中显示背景图片 */
+				background-repeat: no-repeat; /* 防止背景图片重复 */
+			}
+			.text{
+				    padding-top: 65px;
+				    padding-left: 70px;
+			}
+			.text h1{
+				color: #333333;
+				font-size: 42px;
+			}
+			.text p{
+				color: #666606;
+				font-size: 20px;
+			}
+			ul li{
+				display: inline;
+			}
+			.gx{
+				padding: -10px;
+				width: 90%;
+				margin-top: 0;
+				box-shadow: 0px 7px 14px 2px rgba(0, 15, 79, 0.05);
+				display: flex;
+				flex-wrap: nowrap;
+				justify-content: space-between;
+				align-items: center;
+				background-color: #fff;
+				border-radius: 10px;
+				margin-left: 5%;
+				margin-top: -30px;
+				height: 80px;
+			}
+			.gx div ul li{
+				margin-left: 15px;
+			}
+			.f_l{
+				float: left;
+			}
+			.f_r{
+				float: right;
+			}
+			
+			.w_50{
+				width: 48%;
+			}
+			.w_33{
+				width: 30%;
+			}
+			p{
+				font-size: 16px;
+				color: #666666;
+				line-height: 1.95;
+				word-break: break-word; /*或者word-break: break-word;*/
+			}
+			.content{
+				margin-top: 55px;
+			}
+			.p_h{
+				color: #333;
+				font-size:22px;
+			}
+			.p_i{
+				color: #666666;
+				font-size:14px;
+			}
+			.float_box{
+				width: 100%;
+				display: flex;
+				display: inline-block;
+				box-sizing: border-box;
+				text-align: center;
+				margin-top: 50px;
+			}
+			.bg_color{
+				background-color: #f1f3f5;
+				margin-right: 35px;
+				border-radius: 10px;
+				padding-top: 30px;
+			}
+			.center{
+				text-align: center;
+			}
+			.js div p{
+				font-size: 40px;
+				color: #333333;
+			}
+			.js div h5{
+				font-size: 18px;
+				color: #c7000b;
+			}
+			.table_div{
+				width: 100%;
+					margin: 0 auto;
+			}
+			table {
+			   text-align: center;
+			   margin:0 auto; /* 居中 */
+			   border-spacing: 50px;
+			   border-collapse: collapse; /* 合并单元格的边框 */
+			   width: 80%;
+			   line-height: 1.95;
+			}
+
+
+			.enlarge-img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.enlarge-img:hover {
+    transform: scale(1.2);
+}
+
+
+	
+			
+			td, th {
+			    border-bottom: 0.5px solid black; /* 设置单元格的边框样式 */
+			    padding: 10px; /* 设置单元格内容和边框的内边距，根据需要调整 */
+			}
+			
+			tr {
+			    border-bottom: 0.5px solid solid #666666; /* 设置每行的底部边框，可以根据需要调整宽度和颜色 */
+			    margin-bottom: 10px; /* 设置行间距，根据需要调整 */
+			}
+			
+			
+			table thead{
+				font-size: 18px;
+				color: #333;
+				
+			}
+			table tbody{
+				font-size: 14px;
+				color: #666666;
+			}
+			.font_red{
+				color: red;
+			}
+			a{
+				text-decoration: none;
+				color: black;
+			}
+			.xxzx{
+				margin-right: 30px;
+				border-radius:25px;	
+				width: 130px;
+				height: 50px;
+				background-color: #c7000b;
+				text-align: center;
+				padding-bottom: 4px;;
+			}
+			.xxzx{
+				padding-top: 13px;
+				color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+	<Header>
+  
+    <!-- Header 1-->
+    <div class="headbar">
+        <div class="logo-name">
+          <div class="logo">
+            <img src="/img/logohuahua.png" alt="B2B Logo">
+          </div>
+          <div class="name">Hua Hua Tech</div>
+        </div>
+        <div class="search-bar">
+          <div class="search-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+          </div>
+          <input id="search-input" type="text" class="input-text" placeholder="Search by product name or URL">
+        </div>
+        <a class="admin-button" th:href="@{/admin}">Admin page</a>
+      </div>
+      
+      <script>
+        const searchInput = document.getElementById('search-input');
+      
+        searchInput.addEventListener('input', (event) => {
+          const searchTerm = event.target.value;
+         
+          console.log('Search term:', searchTerm);
+          });
+      </script>
+      
+
+      <!-- Header menu-->
+
+      <div class="headmenu">
+        <div class="categories">
+          <div><a th:href="@{/home}">HOME</a></div>
+          
+          <div><a th:href="@{/products}">PRODUCTS</a></div>
+          <div><a th:href="@{/contact}">CONTACT</a></div>
+          <div><a th:href="@{/feedback}">FEEDBACK</a></div>
+        </div>
+        <div class="actions">
+          <div class="favorites">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#1071FF" class="bi bi-star" viewBox="0 0 16 16">
+              <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+            </svg>
+            <div style="color: #1071FF; font-weight: bold;">FAVORITES</div>
+          </div>
+          <div class="cart">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#1071FF" class="bi bi-cart4" viewBox="0 0 16 16">
+              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+            </svg>
+            <div  style="color: #1071FF; font-weight: bold;"> CART</div>
+          </div>
+        </div>
+      </div>
+    </Header>
+		
+				<div class="bg">
+					<div class="text">
+						<h1>HiSecEngine USG12000 series<br>
+						AI FireWall</h1>
+						<P>Intelligent defense, high speed and high density, minimal operation and maintenance</P>
+					</div>
+				</div>
+				<div  class="gx">
+					<div>
+						<ul>
+							<li><a class="font_red" href="#gx">Summarize</a></li>
+							<li><a class="xxx" href="#tx">Characterization</a></li>
+							<li><a class="xxx" href="#jsgg">Technical specification</a></li>
+						</ul>
+					</div>
+					<div>
+						<div  th:object="${product}">
+						<a th:if="${product.quantity > 0}"
+						th:href = "@{/admin/instrution_prevention/payment/{name}(name=${product.productName})}"
+						class="btn xxzx">Consult</a>
+						</div>
+					</div>
+				</div>
+
+
+
+
+				<div id="gs" style="width: 100%;">
+					<div class="f_l w_50" >
+						<img class="enlarge-img" src="../img/fhq.png" />
+						<div id="pricing" class="center">
+							<div class="price-container">
+								<div class="price-box"  th:object="${product}">
+									<h2 class="pricetitle" style="margin-top: 10px;">Price</h2>
+									<p th:text="'$' + ${product.price}"></p>
+									<h2 class="pricetitle">Quantity</h2>
+									<p th:text="${product.quantity}"></p>
+									
+								</div>
+								
+								
+							</div>
+						</div>
+					</div>
+
+
+
+					<div class="f_l w_50 content" >
+						<h2>HiSecEngine USG12000 series AI FireWall</h2>
+						<p>
+							HiSecEngine USG12000 eries FireWall It is the first T-class AI firewall launched by Huawei, which provides real-time protection against known and unknown threats at the network border, and is usually deployed in cloud computing data centers, large enterprises, and campus network outlets to provide leading security protection capabilities for data centers, enterprises, and campus networks.The USG12000 series adopts an advanced hardware architecture design, and applies a variety of green and energy-saving innovative technologies to significantly reduce the device's energy consumption. USG12000 series provides all types of interface boards, and the interface density of a single slot can reach up to 18x100GE to meet the demand of high traffic. Widely used in government, finance, security, education, medical, enterprise and other industries.
+						</p>
+						<p>
+							It provides up to T-level business processing performance and integrates various security features such as NAT, CGN, VPN, virtualization and content security to cope with the new era of heavy traffic and multi-service threat defense scenarios.
+						</p>
+						<p>
+							It has perfect carrier-grade high-reliability architecture and program, supporting multiple reliability mechanisms such as dual-master, dual-machine hot standby, NSR, GR, and so on. It adopts hardware-based software integrity checking to avoid illegal software operation and create a security cornerstone. Users can make flexible choices according to different network requirements.
+						</p>
+					</div>
+				</div>
+
+
+
+
+
+				
+
+
+
+
+
+
+				<div>
+				<div id="tx" class="float_box">
+					<div class="f_r w_33 bg_color">
+						<img src="../img/b1-3.png"/>
+						<p class="p_h">Minimalist Operation and Maintenance</p>
+						<p class="p_i">Intelligent security O&M platform with over </br>
+							80% OPEX reduction</p>
+					</div>
+					<div class="f_r w_33 bg_color">
+						<img src="../img/b1-2.png"/>
+						<p class="p_h">Maximum speed high density</p>
+						<p class="p_i">Innovative Galaxy security hardware platform, enabling the machine's maximum business processing capacity of 2.4T</p>
+					</div>
+					
+					<div class="f_r w_33 bg_color" >
+						<img src="../img/b1-1.png"/>
+						<p class="p_h">Smart defense</p>
+						<p class="p_i">Unique AIE threat detection engine, unknown threat detection accuracy up to 99% or more</p>
+					</div>
+				</div>
+				<div id="jsgg" class="center js">
+					<div><p>Technical specification</p></div>
+					<div><h5>USG12000</h5></div>
+				</div>
+
+
+
+
+
+					<div class="table_div">
+					<table border="0" >
+						<thead>
+							<tr>
+								<td>Model Number</td>
+								<td>USG12004</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Connector</td>
+								<td>24ports 10GBase SFP+ + 2ports 100GBase-QSFP28 interface board<br>
+									24ports 10GBase SFP+ + 4ports 100GBase-QSFP28 interface board<br>
+									48ports 10GBase SFP+interface board<br>
+								</td>
+							</tr>
+							<tr>
+								<td>Product pattern</td>
+								<td>9.8U</td>
+							</tr>
+							<tr>
+								<td>Width×Depth×Height(mm)</td>
+								<td>442 × 874 × 438</td>
+							</tr>
+							<tr>
+								<td>Input Rated Voltage</td>
+								<td>Direct current（DC）：-48V/-60V<br>
+									Alternating current（AC）：220V；50Hz/60Hz<br>
+									High voltage direct current（HVDC）：240V/380V<br>
+								</td>
+							</tr>
+							<tr>
+								<td>Input Voltage Range</td>
+								<td>Direct current（DC）：-40V～-72V<br>
+									Alternating current（AC）：176V～290V；45Hz～65Hz<br>
+									High voltage direct current（HVDC）：188V～288V / 260V~400V<br>
+								</td>
+							</tr>
+							<tr>
+								<td>Maximum Input Current</td>
+								<td>Direct current（DC）：58.5A @ -40V<br>
+									Alternating current（AC）：16A @ 200V ; 18.5A @ 176V<br>
+									High voltage direct current（HVDC）：18A @ 188V ; 13A @ 260V<br>
+								</td>
+							</tr>
+							<tr>
+								<td>Fan Type 	</td>
+								<td>Pluggable Fan</td>
+							</tr>
+							<tr>
+								<td>Power redundancy</td>
+								<td>Spported	</td>
+							</tr>
+							<tr>
+								<td>Weight (empty, without package)	</td>
+								<td>USG12004-DC：81kg<br>
+									USG12004-AC：76kg
+								</td>
+							</tr>
+							<tr>
+								<td>Weight (fully loaded, excluding packages)	</td>
+								<td>USG12004-DC：141.4kg<br>
+									USG12004-AC：142.6kg
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+
+		</div>
+	</body>
+</html>
+<script>
+	
+	var elements = document.getElementsByClassName("xxx"); 
+	
+	for (var i = 0; i < elements.length; i++) {
+	    elements[i].addEventListener("mouseenter", function(event) {
+	      this.classList.add('font_red');
+	    });
+		
+		elements[i].addEventListener("mouseout", function(event) {
+		   this.classList.remove('font_red');
+		});
+	}
+	
+	
+</script>
